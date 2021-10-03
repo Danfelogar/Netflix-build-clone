@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import axios from 'axios';
+import axios from '../axios';
 import '../style/Banner.css';
 import requests from '../Requests';
+
 
 export const Banner = () => {
 
@@ -34,18 +35,18 @@ export const Banner = () => {
         className="banner"
         style={{
             backgroundSize: "cover",
-            backgroundImage: `url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/1200px-Black_flag.svg.png")`,
+            backgroundImage: `url("http://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
             backgroundPosition: "center center" ,
         }}>
             <div className="banner__contents">
                 <h1 className="banner__title">
-                    Movie Name
+                    {movie?.name || movie?.original_name}
                 </h1>
                 <div className="banner__buttons">
                     <button className="banner__button">Play</button>
                     <button className="banner__button">My list</button>
                 </div>
-                <h1 className="banner__description">{truncate(`This is a test description This is a tesdescriptionThis is a test description This is a test descriptionThis is a test description This is a test This is a test description This is aq213123 tesdescriptionThis is a test description This is a test descriptionThis is a test description This is a test This is a test description This is a tesdescriptionThi213213123s is a test description This is a test descriptionThis is a test description This is a test This is a test description This i23132s a tesdescriptionThis is a test description This is a test descriptionThis is a test description This is a testThis is a test description This is a tesdescriptionThis is a test description This is a test descriptionThis is a test description This is a test  `,200)}</h1>
+                <h1 className="banner__description">{truncate(movie?.overview,200)}</h1>
             </div>
 
             <div className="banner--fadeBottom"/>
