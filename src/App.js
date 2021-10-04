@@ -13,6 +13,7 @@ import { login, logout, selectUser } from './features/userSlice';
 import { auth } from './firebase';
 import { HomeScreen } from './Router/HomeScreen';
 import { LoginScreen } from './Router/LoginScreen';
+import { PaypalScreen } from './Router/PaypalScreen';
 import { ProfileScreen } from './Router/ProfileScreen';
 
 function App() {
@@ -48,9 +49,9 @@ function App() {
           <Route path="/profile">
             <ProfileScreen />
           </Route>
-          {/* <Route path="/users">
-            <Users />
-          </Route> */}
+          <Route path="/checkout">
+            <PaypalScreen />
+          </Route>
           <Route path="/">
             <HomeScreen />
           </Route>

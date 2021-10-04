@@ -1,0 +1,45 @@
+.plansSubscription{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.plansSubscriotion__description{
+    display: flex;
+    flex-direction: column;
+}
+
+.plansSubscriotion__description > h2 {
+    color: #fff;
+    padding-left: 15px;
+    font-size: 21px;
+}
+
+.plansSubscriotion__description > h3 > span {
+    color: #fff;
+    padding-left: 20px;
+}
+
+.plansSubscriotion__description > h3 {
+    color: gray;
+    padding-left: 18px;
+    font-size: 15px;
+}
+
+.plansSubscription__btn{
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* .plansSubscription__btn_gray{
+    background-color: gray;
+    width: 40%;
+} */
